@@ -1,25 +1,19 @@
 # Tienda de ropa
 
-Proyecto final web en PHP y SQL: catálogo, carrito, usuarios y administración de productos.
+Tienda escolar con registro, inicio de sesión, catálogo por categoría, carrito y administración de productos.
 
-Proyecto académico de BUAP. Proyecto final seleccionado.
+## Requisitos
 
-## Documentación y requisitos
+PHP 8 con PDO MySQL y MySQL/MariaDB.
 
+## Ejecutar
 
+1. Crea una base vacía e importa schema-database.sql.
+2. Define DB_HOST, DB_PORT, DB_NAME, DB_USER y DB_PASSWORD en el entorno. DB_NAME usa DEAPPSWEB por defecto.
+3. Inicia `php -S 127.0.0.1:8000` desde esta carpeta y abre http://127.0.0.1:8000/index.html.
 
-## Tecnologías y archivos
+El registro público crea clientes. Para una cuenta administradora de pruebas, cambia su campo tipo a 1 directamente en tu base local; no publiques contraseñas.
 
-Extensiones de código: .css, .html, .js, .php.
+## Verificación del 8 de octubre de 2026
 
-## Ejecución
-
-Servir la carpeta con PHP y configurar MySQL si se usa. Establecer `DB_PASSWORD` en el entorno del servidor. Los volcados con datos originales están excluidos; se debe preparar una base de datos de desarrollo.
-
-## Contenido publicado
-
-Se conserva el código y los recursos referenciados. Se excluyen dependencias instaladas, resultados de compilación, configuraciones personales, documentos ajenos al programa y datos locales.
-
-## Estado
-
-Archivo académico original. Puede contener operaciones pendientes o dependencias antiguas. No se ha verificado la ejecución de todos los programas.
+Probado con PHP 8.0.18 y MariaDB 10.4.24 en una base aislada: registro, login, carrito, vaciado y alta/edición/baja de productos. Se comprobó rechazo de clientes en operaciones administrativas y uso del precio de la BD. checkout.php vacía el carrito: no cobra pagos, registra una venta ni descuenta existencias. Requiere completar ese flujo para una tienda real.
