@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="admin">
+    <header>
+        <h1>Panel de Administrador</h1>
+    </header>
+
+    <main>
+
+        <!-- Añadir producto -->
+        <section>
+            <form class="register-form" action="add_product.php" method="POST">
+                <div class="form-columnsPanelAdmin">
+                    <div class="form-columnPanelAdmin">
+                        <h2 class="titulo-con-imagen">
+                            <img src="../assets/img/anadirprod.png" alt="Registro de Producto" class="icono-h2">
+                        </h2>
+
+                        <label for="nombre">Nombre del Producto:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" required></textarea>
+
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-columnPanelAdmin">
+                        <label for="stock">Cantidad en Stock:</label>
+                        <input type="number" id="stock" name="stock" required>
+
+                        <label for="imagen">Nombre del Archivo de Imagen:</label>
+                        <input type="text" id="imagen" name="imagen" placeholder="Playera1.png" required>
+
+                        <label for="tallas">Tallas Disponibles (separadas por comas):</label>
+                        <input type="text" id="tallas" name="tallas" placeholder="S,M,L,XL" required>
+
+                        <label for="tipo">Tipo de Producto:</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="0">Playeras</option>
+                            <option value="1">Pantalones</option>
+                            <option value="2">Accesorios</option>
+                        </select>
+
+                        <button type="submit" class="registro-button-admin">Añadir Producto</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Eliminar producto -->
+        <section>
+            <form class="register-form" action="delete_product.php" method="POST">
+                <div class="form-columnsPanelAdmin">
+                    <div class="form-columnPanelAdmin">
+                        <h2 class="titulo-con-imagen">
+                            <img src="../assets/img/eliminarprod.png" alt="Eliminar Producto" class="icono-h2">
+                        </h2>
+                        <label for="id_producto">ID del Producto:</label>
+                        <input type="number" id="id_producto" name="id_producto" required>
+                        <button type="submit" class="registro-button-admin">Eliminar Producto</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Ver productos -->
+        <section>
+            <form class="register-form" action="view_products.php" method="POST">
+                <div class="form-columnsPanelAdmin">
+                    <div class="form-columnPanelAdmin">
+                        <h2 class="titulo-con-imagen">
+                            <img src="../assets/img/verificarprod.png" alt="Ver Productos" class="icono-h2">
+                        </h2>
+                        <button type="submit" class="registro-button-admin">Ver Productos en Stock</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Modificar producto -->
+        <section>
+            <form class="register-form" action="update_product.php" method="POST">
+                <div class="form-columnsPanelAdmin">
+                    <div class="form-columnPanelAdmin">
+                        <h2 class="titulo-con-imagen">
+                            <img src="../assets/img/modificarprod.png" alt="Modificar Producto" class="icono-h2">
+                        </h2>
+                        
+                        <label for="id_producto_modificar">ID del Producto:</label>
+                        <input type="number" id="id_producto_modificar" name="id_producto" required>
+
+                        <label for="nuevo_nombre">Nuevo Nombre:</label>
+                        <input type="text" id="nuevo_nombre" name="nuevo_nombre">
+
+                        <label for="nueva_descripcion">Nueva Descripción:</label>
+                        <textarea id="nueva_descripcion" name="nueva_descripcion"></textarea>
+                    </div>
+
+                    <div class="form-columnPanelAdmin">
+                        <label for="nuevo_precio">Nuevo Precio:</label>
+                        <input type="number" id="nuevo_precio" name="nuevo_precio" step="0.01">
+
+                        <label for="nuevo_stock">Nueva Cantidad en Stock:</label>
+                        <input type="number" id="nuevo_stock" name="nuevo_stock">
+
+                        <button type="submit" class="registro-button-admin">Modificar Producto</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

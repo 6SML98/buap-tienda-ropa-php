@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Tienda de Ropa</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="registro">
+
+<header>
+  <img src="assets/img/Registro.png" alt="Encabezado Registro">
+</header>
+
+<main class="form-container">
+  <img src="assets/img/Logo.png" alt="Logo de la Tienda de Ropa" class="logo">
+  <div id="formularios">
+    <form class="register-form" action="includes/auth/registro.php" method="POST">
+      <div class="form-columns">
+        <div class="form-column">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="John" required>
+
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Doe" required>
+
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+          
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Calle 123" required>
+        </div>
+
+        <div class="form-column">
+          <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
+
+          <label for="tipo">Tipo de Usuario:</label>
+          <select id="tipo" name="tipo" required>
+            <option value="0">Cliente</option>
+            <option value="1">Administrador</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="registro-button">Registrarse</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Tienda de Ropa. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

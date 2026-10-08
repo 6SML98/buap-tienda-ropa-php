@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Tienda de Ropa</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Inicio de Sesión</h1>
+</header>
+
+<main class="form-container">
+  <form class="login-form" action="includes/auth/login.php" method="POST">
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" required>
+
+    <button type="submit" class="home-button">Ingresar</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 Tienda de Ropa. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
